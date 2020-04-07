@@ -1,5 +1,5 @@
 ####################################
-#### Marelli - server.R ###
+#### Marelli GRC KPI - server.R ###
 ####################################
 
 library(shiny)

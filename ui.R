@@ -1,12 +1,12 @@
 ###############################
-### Marelli - ui.R ###
+### Marelli GRC KPI - ui.R ###
 ###############################
 
 library(shiny) 
 
 shinyUI(pageWithSidebar( 
   
-  headerPanel("Google Analytics"), 
+  headerPanel("Marelli GRC KPI"), 
   
   sidebarPanel( 
     
