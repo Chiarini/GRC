@@ -16,7 +16,7 @@ shinyServer(function(input, output) { # server is defined within these parenthes
     
     analytics <- analytics[analytics$Date %in% seq.Date(input$dateRange[1], input$dateRange[2], by = "days"),]
     
-    analytics <- analytics[analytics$Hour %in% as.numeric(input$minimumTime) : as.numeric(input$maximumTime),]
+#    analytics <- analytics[analytics$Hour %in% as.numeric(input$minimumTime) : as.numeric(input$maximumTime),]
     
     if(class(input$domainShow)=="character"){
       
