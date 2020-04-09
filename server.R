@@ -5,8 +5,13 @@
 library(shiny)
 library(plyr)
 library(ggplot2)
+#library(tidyverse)
 
-load("analytics.Rdata") # load the dataframe
+#load("analytics.Rdata") # load the dataframe
+load("RPT_ID10_IWOG046MSuspP52Marzo2020") # load the dataframe
+#G046Msusp <- read.csv2("RPT_ID10_IWOG046MSuspP52Marzo2020.csv")
+#G048MEurope <- read.csv2("RPT_ID10_IWOG048MEuropeP52Marzo2020.csv")
+#G351MALighting <- read.csv2("RPT_ID10_IWOG351MALightingP52Marzo2020.csv")
 
 shinyServer(function(input, output) { # server is defined within these parentheses
   
@@ -18,9 +23,9 @@ shinyServer(function(input, output) { # server is defined within these parenthes
     
 #    analytics <- analytics[analytics$Hour %in% as.numeric(input$minimumTime) : as.numeric(input$maximumTime),]
     
-    if(class(input$domainShow)=="character"){
+    if(class(input$regionShow)=="character"){
       
-      analytics <- analytics[analytics$Domain %in% unlist(input$domainShow),]
+      analytics <- analytics[analytics$Domain %in% unlist(input$regionShow),]
       
     }
     

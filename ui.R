@@ -34,7 +34,7 @@ shinyUI(pageWithSidebar(
 #                  label = "Add smoother?",
 #                  value = FALSE),
     
-    checkboxGroupInput(inputId = "domainShow",
+    checkboxGroupInput(inputId = "regionShow",
                        label = "EMEA",
                        choices = list("Marelli A. Lighting Italy S.p.A." = "NHS",
                                       "Marelli Europe S.p.A." = "bounceRate",
