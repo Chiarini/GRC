@@ -8,10 +8,15 @@ library(ggplot2)
 #library(tidyverse)
 
 #load("analytics.Rdata") # load the dataframe
-load("RPT_ID10_IWOG046MSuspP52Marzo2020") # load the dataframe
+
+load("RPT_ID10_IWOG046MSuspP52Marzo2020.Rdata") # load the dataframe
+
 #G046Msusp <- read.csv2("RPT_ID10_IWOG046MSuspP52Marzo2020.csv")
 #G048MEurope <- read.csv2("RPT_ID10_IWOG048MEuropeP52Marzo2020.csv")
 #G351MALighting <- read.csv2("RPT_ID10_IWOG351MALightingP52Marzo2020.csv")
+#save(RPT_ID10_IWOG046MSuspP52Marzo2020, file = "RPT_ID10_IWOG046MSuspP52Marzo2020.RData")
+#save(RPT_ID10_IWOG048MEuropeP52Marzo2020, file = "RPT_ID10_IWOG048MEuropeP52Marzo2020.RData")
+#save(RPT_ID10_IWOG351MALightingP52Marzo2020, file = "RPT_ID10_IWOG351MALightingP52Marzo2020.RData")
 
 shinyServer(function(input, output) { # server is defined within these parentheses
   
