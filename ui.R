@@ -34,18 +34,18 @@ shinyUI(pageWithSidebar(
 #                  label = "Add smoother?",
 #                  value = FALSE),
     
-    checkboxGroupInput(inputId = "regionShow",
-                       label = "EMEA",
-                       choices = list("Marelli A. Lighting Italy S.p.A." = "NHS",
-                                      "Marelli Europe S.p.A." = "bounceRate",
-                                      "Marelli Suspension S. Italy S.p.A." = "Other")
-                       ),
+#    checkboxGroupInput(inputId = "regionShow",
+#                       label = "EMEA",
+#                       choices = list("Marelli A. Lighting Italy S.p.A." = "NHS",
+#                                      "Marelli Europe S.p.A." = "bounceRate",
+#                                      "Marelli Suspension S. Italy S.p.A." = "Other")
+#                       ),
     
-#    radioButtons(inputId = "outputType",
-#                 label = "Output required",
-#                 choices = list("Marelli Automotive Lighting Italy S.p.A." = "visitors",
-#                                "Marelli Europe S.p.A." = "bounceRate",
-#                                "Marelli Suspension Systems Italy S.p.A." = "timeOnSite"))
+    radioButtons(inputId = "regionShow",
+                 label = "EMEA",
+                 choices = list("Marelli Automotive Lighting Italy S.p.A." = "G351",
+                                "Marelli Europe S.p.A." = "G048",
+                                "Marelli Suspension Systems Italy S.p.A." = "G046"))
 
   ),
 

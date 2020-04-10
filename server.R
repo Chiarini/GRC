@@ -42,23 +42,23 @@ shinyServer(function(input, output) { # server is defined within these parenthes
     
     graphData <- ddply(passData(), .(Domain, Date), numcolwise(sum))
     
-    if(input$outputType == "visitors"){
+    if(input$outputType == "G351"){
       
       theGraph <- ggplot(graphData, aes(x = Date, y = visitors, group = Domain, colour = Domain)) + geom_line() +
         ylab("Unique visitors")
       
     }
     
-    if(input$outputType == "bounceRate"){
+    if(input$outputType == "G048"){
       
       theGraph <- ggplot(graphData, aes(x = Date, y = bounces / visits * 100, group = Domain, colour = Domain)) +
         geom_line() + ylab("Bounce rate %")
       
     }
     
-    if(input$outputType == "timeOnSite"){
+    if(input$outputType == "G046"){
       
-      theGraph <- ggplot(graphData, aes(x = Date, y = timeOnSite / visits, group = Domain, colour = Domain)) +
+      theGraph <- ggplot(graphData, aes(x = Anno_Mese, y = Amount_TOT, group = c_AmountCluster, colour = c_AmountCluster)) +
         geom_line() + ylab("Average time on site")
       
     }
@@ -77,23 +77,23 @@ shinyServer(function(input, output) { # server is defined within these parenthes
     
     graphData = ddply(passData(), .(Domain, Hour), numcolwise(sum))
     
-    if(input$outputType == "visitors"){
+    if(input$outputType == "G351"){
       
-      theGraph <- ggplot(graphData, aes(x = Hour, y = visitors, group = Domain, colour = Domain)) + geom_line() +
+      theGraph <- ggplot(graphData, aes(x = Anno_Mese, y = Amount_TOT, group = c_AmountCluster, colour = c_AmountCluster)) + geom_line() +
         ylab("Unique visitors")
       
     }
     
-    if(input$outputType == "bounceRate"){
+    if(input$outputType == "G048"){
       
-      theGraph <- ggplot(graphData, aes(x = Hour, y = bounces / visits * 100, group = Domain, colour = Domain)) +
+      theGraph <- ggplot(graphData, aes(x = Anno_Mese, y = Amount_TOT, group = c_AmountCluster, colour = c_AmountCluster)) +
         geom_line() + ylab("Bounce rate %")
       
     }
     
-    if(input$outputType == "timeOnSite"){
+    if(input$outputType == "G046"){
       
-      theGraph <- ggplot(graphData, aes(x = Hour, y = timeOnSite / visits, group = Domain, colour = Domain)) +
+      theGraph <- ggplot(graphData, aes(x = Anno_Mese, y = Amount_TOT, group = c_AmountCluster, colour = c_AmountCluster)) +
         geom_line() + ylab("Average time on site")
       
     }
