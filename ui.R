@@ -10,11 +10,9 @@ shinyUI(pageWithSidebar(
   
   sidebarPanel( 
     
-    dateRangeInput(inputId = "dateRange",  
-                   label = "Date range", 
-                   start = "2017-01-01",
-                   max = Sys.Date()
-    ),
+    selectInput(inputId = "Year",  
+                   label = "Year", 
+                   list('2017','2018','2019','2020'),),
     
 #    sliderInput(inputId = "minimumTime",
 #                label = "Hours of interest- minimum",
@@ -41,11 +39,16 @@ shinyUI(pageWithSidebar(
 #                                      "Marelli Suspension S. Italy S.p.A." = "Other")
 #                       ),
     
-    radioButtons(inputId = "regionShow",
-                 label = "EMEA",
-                 choices = list("Marelli Automotive Lighting Italy S.p.A." = "G351",
-                                "Marelli Europe S.p.A." = "G048",
-                                "Marelli Suspension Systems Italy S.p.A." = "G046"))
+
+radioButtons(inputId = "Company",
+             label = "EMEA Companies:",
+             choices = list("Marelli Aftermarket Italy S.p.A." = "ZM01",
+                            "Marelli A. Lighting Italy S.p.A." = "G351",
+                            "Marelli A.L. Reutlingen GmbH" = "D001",
+                            "Marelli Bielsko B. Poland Sp.zoo" = "P001",
+                            "Marelli Europe S.p.A." = "G048",
+                            "Marelli Suspension S. Italy S.p.A." = "G046"))
+
 
   ),
 
