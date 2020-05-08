@@ -11,7 +11,7 @@ shinyUI(pageWithSidebar(
   sidebarPanel( 
     
     selectInput(inputId = "Year",  
-                   label = "Year", 
+                   label = "Year range", 
                    list('2017','2018','2019','2020'),),
     
 #    sliderInput(inputId = "minimumTime",
@@ -56,7 +56,7 @@ radioButtons(inputId = "Company",
     tabsetPanel( 
       tabPanel("Summary", textOutput("textDisplay")), 
       tabPanel("Invoices without P.O.", plotOutput("monthGraph")),
-      tabPanel("Assets aging", plotOutput("hourGraph"))
+      tabPanel("Assets aging", plotOutput("monthGraph"))
     )
   )
 ))

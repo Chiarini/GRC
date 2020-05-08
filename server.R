@@ -10,6 +10,8 @@ library(ggplot2)
 #load("analytics.Rdata") # load the dataframe
 
 (load("RPT_ID10_IWOG046MSuspP52Marzo2020.RData")) # load the dataframe
+(load("RPT_ID10_IWOG048MEuropeP52Marzo2020.RData")) # load the dataframe
+
 
 #G046Msusp <- read.csv2("RPT_ID10_IWOG046MSuspP52Marzo2020.csv")
 #G048MEurope <- read.csv2("RPT_ID10_IWOG048MEuropeP52Marzo2020.csv")
@@ -23,10 +25,6 @@ shinyServer(function(input, output) { # server is defined within these parenthes
   # prep data once and then pass around the program
   
   passData <- reactive({
-    
-#    analytics <- analytics[analytics$Date %in% seq.Date(input$dateRange[1], input$dateRange[2], by = "days"),]
-    
-#    analytics <- analytics[analytics$Hour %in% as.numeric(input$minimumTime) : as.numeric(input$maximumTime),]
     
 #    if(class(input$regionShow)=="character"){
       
