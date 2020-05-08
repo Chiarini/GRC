@@ -56,7 +56,7 @@ radioButtons(inputId = "Company",
     tabsetPanel( 
       tabPanel("Summary", textOutput("textDisplay")), 
       tabPanel("Invoices without P.O.", plotOutput("monthGraph")),
-      tabPanel("Assets aging", plotOutput("monthGraph"))
+      tabPanel("Assets aging", plotOutput("hourGraph"))
     )
   )
 ))
